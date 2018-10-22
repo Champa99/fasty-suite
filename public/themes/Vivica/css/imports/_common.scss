@@ -1,0 +1,66 @@
+/*
+ * Auto created by artisan on 18.10.2018 at 15:33
+ * imports/_common
+ * @author Champa
+ */
+
+h4.title {
+
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.button {
+	padding: 10px 16px;
+	background: $primary-color;
+	color: #fff;
+	border-radius: 4px;
+	font-weight: 400;
+	border: 0;
+	cursor: pointer;
+	font-size: 20px;
+	border: 1px solid $primary-color;
+
+	@include transition(.2s all);
+
+	&:active, &:focus {
+
+		background: $primary-dark;
+	}
+
+	&.loading {
+
+		&:hover {
+
+			&:after {
+				margin: 0 !important;
+			}
+		}
+
+		&:after {
+			margin: 0 !important;
+			content: "" !important;
+		}
+	}
+
+	&.go {
+		&:hover {
+
+			&:after {
+				opacity: 1;
+				margin-left: 5px;
+			}
+		}
+
+		&:after {
+			content: "\f054";
+			font-family: "Font Awesome 5 Free";
+			font-weight: 900;
+			font-size: 15px;
+			opacity: 0;
+			margin-left: -2px;
+
+			@include transition(.2s all);
+		}
+	}
+}

@@ -1,0 +1,11 @@
+.normalize_input {
+	
+	border: 0 !important;
+	box-shadow: none !important;
+	height: auto !important;
+
+	&:active, &:focus {
+		border: 0 !important;
+		box-shadow: none !important;
+	}
+}

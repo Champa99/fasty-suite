@@ -1,0 +1,60 @@
+@mixin gradient($angle, $from, $to) {
+	background: $from;
+	background: -webkit-linear-gradient($angle, $from, $to);
+	background: linear-gradient($angle, $from, $to);
+}
+
+@mixin transition($transition...) {
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -webkit-transition: $transition;
+    transition: $transition;
+}
+
+@mixin normalize_input() {
+
+	height: auto;
+	border: 0;
+	color: #333;
+	border: 0 !important;
+
+	&:focus {
+		box-shadow: none !important;
+	}
+}
+
+@mixin calcWidth($arg1, $arg2){
+	width: 100%;
+	max-width: -webkit-calc(#{$arg1} - #{$arg2});
+	max-width: -moz-calc(#{$arg1} - #{$arg2});
+	max-width: calc(#{$arg1} - #{$arg2});
+}
+
+@mixin calcHeight($arg1, $arg2){
+	height: 100%;
+	max-height: -webkit-calc(#{$arg1} - #{$arg2});
+	max-height: -moz-calc(#{$arg1} - #{$arg2});
+	max-height: calc(#{$arg1} - #{$arg2});
+}
+
+@mixin filter_blur($amount){
+	-webkit-filter: blur($amount);
+	-moz-filter: blur($amount);
+	-o-filter: blur($amount);
+	-ms-filter: blur($amount);
+	filter: blur($amount);
+}
+
+@mixin not_selectable(){
+	user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+}
+
+@mixin box-shadow($arg...){
+	-webkit-box-shadow: $arg;
+	-o-box-shadow: $arg;
+	box-shadow: $arg;
+}

@@ -1,0 +1,112 @@
+/*
+ * Auto created by artisan on 25.09.2018 at 22:52
+ * login
+ * @author Champa
+ */
+/*
+ * Auto created by artisan on 18.10.2018 at 22:27
+ * imports/_vars
+ * @author Champa
+ */
+.normalize_input {
+  border: 0 !important;
+  box-shadow: none !important;
+  height: auto !important; }
+  .normalize_input:active, .normalize_input:focus {
+    border: 0 !important;
+    box-shadow: none !important; }
+
+/*
+ * Auto created by artisan on 18.10.2018 at 15:33
+ * imports/_common
+ * @author Champa
+ */
+h4.title {
+  font-weight: bold;
+  font-size: 25px; }
+
+.button {
+  padding: 10px 16px;
+  background: rgba(255, 115, 0, 0.932);
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 400;
+  border: 0;
+  cursor: pointer;
+  font-size: 20px;
+  border: 1px solid rgba(255, 115, 0, 0.932);
+  -moz-transition: 0.2s all;
+  -o-transition: 0.2s all;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all; }
+  .button:active, .button:focus {
+    background: rgba(197, 79, 0, 0.932); }
+  .button.loading:hover:after {
+    margin: 0 !important; }
+  .button.loading:after {
+    margin: 0 !important;
+    content: "" !important; }
+  .button.go:hover:after {
+    opacity: 1;
+    margin-left: 5px; }
+  .button.go:after {
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 15px;
+    opacity: 0;
+    margin-left: -2px;
+    -moz-transition: 0.2s all;
+    -o-transition: 0.2s all;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all; }
+
+.loginHolder {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: #F09819;
+  background: -webkit-linear-gradient(to left, #F09819, #FF512F);
+  background: linear-gradient(to left, #F09819, #FF512F); }
+  .loginHolder .login-title {
+    text-align: center;
+    color: #fff;
+    font-weight: 200;
+    letter-spacing: .5px; }
+  .loginHolder .loginWindow {
+    height: 350px;
+    width: 300px;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background: #fff;
+    border-radius: 4px; }
+    .loginHolder .loginWindow .title {
+      font-size: 40px; }
+    .loginHolder .loginWindow .cred-button {
+      width: 100%; }
+    .loginHolder .loginWindow .cred-input {
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      padding: 12px 6px;
+      font-size: 17px;
+      color: #333;
+      border: 1px solid rgba(255, 115, 0, 0.932) !important;
+      width: 100%;
+      max-width: -webkit-calc(100% - 12px);
+      max-width: -moz-calc(100% - 12px);
+      max-width: calc(100% - 12px); }
+      .loginHolder .loginWindow .cred-input::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #8a8a8a; }
+      .loginHolder .loginWindow .cred-input:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #8a8a8a; }
+      .loginHolder .loginWindow .cred-input::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: #8a8a8a; }
+
+/*# sourceMappingURL=login.css.map */
