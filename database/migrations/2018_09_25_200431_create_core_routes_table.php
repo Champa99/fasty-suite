@@ -26,6 +26,8 @@ class CreateCoreRoutesTable extends Migration
 			$table->string('uri', 255);
 			$table->string('controller', 255);
 			$table->boolean('isEnabled')->default(true);
+			$table->smallInteger('perm_group');
+			$table->tinyInteger('perm');
         });
     }
 

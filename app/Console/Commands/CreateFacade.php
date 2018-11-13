@@ -4,21 +4,21 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class CreateComponent extends Command
+class CreateFacade extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'make:package {namespace} {name} {author=Champa}';
+    protected $signature = 'make:facade {name}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Creates a new package';
+    protected $description = 'Creates a laravel facade';
 
     /**
      * Create a new command instance.
@@ -37,35 +37,35 @@ class CreateComponent extends Command
      */
     public function handle()
     {
-        $namespace = $this->argument('namespace');
         $name = $this->argument('name');
 
-        $file = base_path() .'/app/Packages/'. $namespace .'/'. $name .'.php';
-
-        if(!file_exists(base_path() .'/app/Packages/'. $namespace)) {
-            mkdir(base_path() .'/app/Packages/'. $namespace, 0700);
-		}
+        $file = base_path() .'/app/Facades/'. $name .'.php';
 		
 		$content = '<?php
 
 /**
  * Auto created by artisan on '. date("d.m.Y \a\\t H:i") .'
- * @author '. $this->argument('author') .'
  */
 
-namespace App\\Packages\\'. $namespace .';
+namespace App\Facades;
 
-use Cache;
-use DB;
-use App\Packages\System\CacheVisor;
+use Illuminate\Support\Facades\Facade;
 
-class '. $name .'
+class '. $name .' extends Facade
 {
-	//
+
+	/**
+	 * Tells our facade what dependency to return
+	 */
+
+    protected static function getFacadeAccessor() {
+		
+		return \'dependency_name\';
+	}
 }';
 
         file_put_contents($file, $content, LOCK_EX);
 
-        $this->info('Package '. $namespace .'\\'. $name .' successfully created!');
+        $this->info('Facade '. $name .' successfully created!');
     }
 }

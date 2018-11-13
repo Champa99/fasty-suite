@@ -10,12 +10,14 @@ jQuery(function($) {
 
 	const $login_form = $("#login_form");
 	const $login_button = $("#login_button");
-	const $login_window = $("#login_window");
+	const $login_modul_holder = $("#login_modul_holder");
+	const $wrong_credentials = $("#wrong_credentials");
 
 	$login_form.submit(function(e) {
 
 		e.preventDefault();
 
+		$wrong_credentials.removeClass('open');
 		$login_button.enableLoader(true);
 
 		$.ajax({
@@ -29,11 +31,14 @@ jQuery(function($) {
 				switch(res.code) {
 
 					case 1:
-						redirect('/');
+						redirect(res.payload);
 						break;
 
 					default:
-						$login_window.animateCss('shake');
+						$login_modul_holder.animateCss('shake', function() {
+
+							$wrong_credentials.addClass('open');
+						});
 						break;
 				}
 

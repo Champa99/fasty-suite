@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Fasty Suite'),
 
     /*
     |--------------------------------------------------------------------------
@@ -158,8 +158,11 @@ return [
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
-
+		App\Providers\RouteServiceProvider::class,
+		
+		App\Providers\SecureRouteServiceProvider::class,
+		App\Providers\RouteGuardServiceProvider::class,
+		App\Providers\UserServiceProvider::class,
     ],
 
     /*
@@ -207,9 +210,14 @@ return [
         'Storage' => Illuminate\Support\Facades\Storage::class,
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
-        'View' => Illuminate\Support\Facades\View::class,
+		'View' => Illuminate\Support\Facades\View::class,
+
 
 		'ConfigManager' => App\Packages\Core\ConfigManager::class,
+		'SecureRoute' => App\Facades\SecureRoute::class,
+		'User' => App\Facades\User::class,
+		'RouteGuard' => App\Facades\RouteGuard::class,
+		'ButtonManager' => App\Packages\Core\ButtonManager::class
     ],
 
 ];

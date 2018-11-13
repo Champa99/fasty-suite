@@ -1,0 +1,147 @@
+/*
+ * Auto created by artisan on 06.11.2018 at 18:20
+ * admin
+ * @author Champa
+ */
+/*
+ * Auto created by artisan on 18.10.2018 at 22:27
+ * imports/_vars
+ * @author Champa
+ */
+.normalize_input {
+  border: 0 !important;
+  box-shadow: none !important;
+  height: auto !important; }
+  .normalize_input:active, .normalize_input:focus {
+    border: 0 !important;
+    box-shadow: none !important; }
+
+/*
+ * Auto created by artisan on 18.10.2018 at 15:33
+ * imports/_common
+ * @author Champa
+ */
+h4.title {
+  font-weight: bold;
+  font-size: 25px; }
+
+.row {
+  margin-bottom: 10px; }
+
+.button {
+  padding: 10px 16px;
+  background: rgba(255, 115, 0, 0.932);
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 400;
+  border: 0;
+  cursor: pointer;
+  font-size: 20px;
+  border: 1px solid rgba(255, 115, 0, 0.932);
+  -moz-transition: 0.2s all;
+  -o-transition: 0.2s all;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all; }
+  .button:active, .button:focus {
+    background: rgba(197, 79, 0, 0.932); }
+  .button.loading:hover:after {
+    margin: 0 !important; }
+  .button.loading:after {
+    margin: 0 !important;
+    content: "" !important; }
+  .button.go:hover:after {
+    opacity: 1;
+    margin-left: 5px; }
+  .button.go:after {
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 15px;
+    opacity: 0;
+    margin-left: -2px;
+    -moz-transition: 0.2s all;
+    -o-transition: 0.2s all;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all; }
+
+.content-holder {
+  border-radius: 4px;
+  background: #fff;
+  padding: 8px; }
+
+/*
+ * Auto created by artisan on 12.11.2018 at 13:56
+ * components/_widgets
+ * @author Champa
+ */
+.widget-container {
+  border-radius: 4px; }
+  .widget-container .title {
+    color: #fff;
+    border-radius: 4px 4px 0 0;
+    font-size: 19px;
+    padding: 8px;
+    font-weight: 500;
+    background: rgba(255, 115, 0, 0.932); }
+  .widget-container .content {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 0;
+    border-radius: 0 0 4px 4px;
+    padding: 8px; }
+
+/*
+ * Auto created by artisan on 06.11.2018 at 18:30
+ * components/adminHeader
+ * @author Champa
+ */
+.header {
+  height: 250px;
+  background: rgba(255, 115, 0, 0.932);
+  background: -webkit-linear-gradient(-315deg, rgba(255, 115, 0, 0.932), rgba(197, 79, 0, 0.932));
+  background: linear-gradient(-315deg, rgba(255, 115, 0, 0.932), rgba(197, 79, 0, 0.932)); }
+  .header h1 {
+    font-size: 45px;
+    text-align: center;
+    color: #fff;
+    font-weight: lighter;
+    margin: 0;
+    padding-top: 85px; }
+    .header h1 span {
+      font-weight: normal; }
+  .header .menu-bar {
+    height: 50px;
+    margin-top: 35px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 4px 4px 0 0; }
+    .header .menu-bar .menu-list .menu-item {
+      float: left;
+      height: 50px;
+      line-height: 45px;
+      text-align: center;
+      padding: 0 8px;
+      font-size: 19px;
+      font-weight: 500;
+      color: #424242;
+      -moz-transition: 0.2s all;
+      -o-transition: 0.2s all;
+      -webkit-transition: 0.2s all;
+      transition: 0.2s all; }
+      .header .menu-bar .menu-list .menu-item .icon {
+        color: rgba(255, 115, 0, 0.932); }
+      .header .menu-bar .menu-list .menu-item:hover {
+        background: #fff; }
+      .header .menu-bar .menu-list .menu-item:nth-of-type(1) {
+        border-radius: 4px 0 0 0; }
+
+.pull-up-content {
+  margin-top: -35px; }
+
+/*
+ * Auto created by artisan on 06.11.2018 at 18:26
+ * pages/adminIndex
+ * @author Champa
+ */
+body {
+  background: #eeeeee; }
+
+/*# sourceMappingURL=admin.css.map */

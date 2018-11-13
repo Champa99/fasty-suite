@@ -17,18 +17,92 @@ class User
 	 * Holds user data
 	 */
 
-	private static $info;
+	private $info;
+
 	/**
-	 * Sets the user data
+	 * Holds the group perm info
 	 */
 
-	public static function setInfo(array $info) : void {
+	private $groupInfo;
 
-		self::$info = $info;
+	/**
+	 * The LoadUser component
+	 */
+
+	private $userLoader;
+
+	/**
+	 * LoadGroup component
+	 */
+
+	private $groupLoader;
+
+	public function __construct() {
+
+		$this->userLoader = new LoadUser();
 	}
 
-	public static function info() {
+	/**
+	 * Loads the info from the userLoader component
+	 * 
+	 * @param $session - the session we want to load the user from
+	 */
 
-		return self::$info;
+	public function loadInfo(string $session) {
+
+		// Set the session for the userLoader component
+		$this->userLoader->setSession($session);
+		$info = $this->userLoader->loadInfo();
+
+		// Set the loaded info to our class property
+		$this->setInfo($info);
+
+		// Load the group data
+		$group_id = $this->getInfo()->group_id;
+		$this->groupLoader = new LoadGroup($group_id);
+
+		$this->groupInfo = $this->groupLoader->permissions();
+
+		return $this;
+	}
+
+	/**
+	 * Get the value of info
+	 */ 
+	public function getInfo() {
+
+		return $this->info;
+	}
+
+	/**
+	 * Set the value of info
+	 *
+	 * @return  self
+	 */ 
+	public function setInfo($info) {
+
+		$this->info = $info;
+
+		return $this;
+	}
+
+	/**
+	 * Get the value of groupInfo
+	 */ 
+	public function getGroupInfo() {
+
+		return $this->groupInfo;
+	}
+
+	/**
+	 * Set the value of groupInfo
+	 *
+	 * @return  self
+	 */ 
+	public function setGroupInfo($groupInfo) {
+
+		$this->groupInfo = $groupInfo;
+
+		return $this;
 	}
 }

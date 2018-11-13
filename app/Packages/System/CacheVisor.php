@@ -5,7 +5,7 @@
  * @author Champa
  */
 
-namespace App\Packages\Core;
+namespace App\Packages\System;
 
 class CacheVisor
 {

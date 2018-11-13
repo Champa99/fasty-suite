@@ -12,27 +12,22 @@ foreach($routes AS $route) {
 
 	if($route->method == 'GET') {
 
-		Route::get($route->uri, $route->controller);
+		SecureRoute::get($route->uri, $route->controller, $route->perm_group, $route->perm);
 		continue;
 	}
 
 	if($route->method == 'POST') {
 
-		Route::post($route->uri, $route->controller);
+		SecureRoute::post($route->uri, $route->controller, $route->perm_group, $route->perm);
 		continue;
 	}
 }
 
 // Admin panel
-Route::get('/admin', 'AdminController@index');
+SecureRoute::get('/admin', 'AdminController@index', 1, 1);
 
 // Login routes
-Route::get('/login', 'LoginController@index');
-Route::post('/login/auth', 'LoginController@auth');
+SecureRoute::get('/login', 'LoginController@index');
+SecureRoute::post('/login/auth', 'LoginController@auth');
 
-Route::get('/', function () {
-	
-	$session = new \App\Packages\User\Session(1);
-
-	$session->create(1);
-});
+SecureRoute::get('/', 'HomeController@index', 1, 1);

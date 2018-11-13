@@ -24,47 +24,69 @@
 		letter-spacing: .5px;
 	}
 
-	.loginWindow {
-		height: 350px;
+	.login-modul-holder {
 		width: 300px;
+		height: 295px;
 		position: fixed;
 		bottom: 0;
 		top: 0;
 		right: 0;
 		left: 0;
 		margin: auto;
-		background: #fff;
-		border-radius: 4px;
 
-		.title {
-			font-size: 40px;
-		}
-
-		.cred-button {
-			width: 100%;
-		}
-
-		.cred-input {
-
-			background: rgba(0, 0, 0, .1);
+		.wrong-credentials {
+			color: #fff;
+			width: 300px;
+			background: red;
 			border-radius: 4px;
-			padding: 12px 6px;
-			font-size: 17px;
-			color: #333;
-			border: 1px solid $primary-color !important;
+			padding: 8px;
+			margin: auto;
+			margin-bottom: -40px;
 
-			@include calcWidth(100%, 12px);
+			@include transition(.2s margin);
 
-			&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-				color: #8a8a8a;
+			&.open {
+				margin-bottom: -5px;
 			}
+		}
+
+		.loginWindow {
+			height: 295px;
+			width: 300px;
 			
-			&:-ms-input-placeholder { /* Internet Explorer 10-11 */
-				color: #8a8a8a;
+			background: #fff;
+			border-radius: 4px;
+
+			.title {
+				font-size: 40px;
 			}
-			
-			&::-ms-input-placeholder { /* Microsoft Edge */
-				color: #8a8a8a;
+
+			.cred-button {
+				width: 100%;
+			}
+
+			.cred-input {
+
+				background: rgba(0, 0, 0, .1);
+				border-radius: 4px;
+				padding: 12px 6px;
+				font-size: 17px;
+				color: #333;
+				border: 1px solid $primary-color !important;
+
+				@include calcWidth(100%, 12px);
+
+				&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+					color: #8a8a8a;
+				}
+				
+				&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+					color: #8a8a8a;
+				}
+				
+				&::-ms-input-placeholder { /* Microsoft Edge */
+					color: #8a8a8a;
+				}
 			}
 		}
 	}

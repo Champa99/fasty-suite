@@ -69,24 +69,38 @@ class Arrays
 		return;
 	}
 
-	public static function groupByVal(array &$array, $val) : void {
+	public static function groupByVal(array $array, $val, bool $arrayBased = false) {
 
 		$tmp = [];
 
-		foreach($array AS $item) {
+		if(!$arrayBased) {
 
-			if(!isset($tmp[$item[$val]])) {
+			foreach($array AS $item) {
+				dump("a");
+				if(!isset($tmp[$item->$val])) {
 
-				$tmp[$item[$val]] = [];
+					$tmp[$item->$val] = [];
+				}
+				
+				array_push($tmp[$item->$val], $item);
 			}
-			
-			array_push($tmp[$item[$val]], $item);
+		} else {
+
+			foreach($array AS $item) {
+
+				if(!isset($tmp[$item[$val]])) {
+
+					$tmp[$item[$val]] = [];
+				}
+				
+				array_push($tmp[$item[$val]], $item);
+			}
 		}
 
 		$array = $tmp;
 		unset($tmp);
 
-		return;
+		return $array;
 	}
 
 	/**

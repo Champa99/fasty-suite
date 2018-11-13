@@ -26,14 +26,12 @@ class RouteManager
 
 	public function loadRoutes() {
 
-		$data = Cache::remember('routes', 0, function() {
+		$this->routes = Cache::remember('routes', 0, function() {
 
-			$q = "SELECT method, uri, controller FROM core_routes WHERE isEnabled = 1";
+			$q = "SELECT method, uri, controller, perm_group, perm FROM core_routes WHERE isEnabled = 1";
 
 			return DB::select($q);
 		});
-
-		$this->routes = $data;
 	}
 
 	/**

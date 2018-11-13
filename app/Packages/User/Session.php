@@ -23,6 +23,15 @@ class Session
 	}
 
 	/**
+	 * Returns a hashed version of the token
+	 */
+
+	public static function hashToken(string $token) : string {
+
+		return hash('sha256', $token);
+	}
+
+	/**
 	 * Generates a new session id
 	 * 
 	 * @return array - hashed session id and the plain one
@@ -41,7 +50,7 @@ class Session
 
 		$session = [
 			'id' => $key,
-			'hashed' => hash('sha256', $key)	
+			'hashed' => hash('sha256', $key)
 		];
 
 		return $session;

@@ -64,6 +64,9 @@ class ConfigManager
 			}
 
 			unset($data);
+
+			$tmp = (object) array_merge((array) self::$defaults, (array) $tmp);
+
 			return $tmp;
 		});
 	}
@@ -94,12 +97,12 @@ class ConfigManager
 
 		$module = htmlentities($module);
 
-		$cssPath = 'themes/'. self::read()->theme .'/'. $module;
+		$path = 'themes/'. self::read()->theme .'/'. $module;
 
 		// If a module exists, return it
-		if(file_exists($cssPath)) {
+		if(file_exists($path)) {
 
-			return $cssPath;
+			return $path;
 		}
 
 		// Otherwise, return the default theme module

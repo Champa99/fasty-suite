@@ -10,5 +10,6 @@ return [
 	'name_email' => 'Username or email',
 	'password' => 'Password',
 	'login' => 'Login',
-	'remember' => 'Remember me?'
+	'remember' => 'Remember me?',
+	'wrong_credentials' => 'Wrong username/email or password'
 ];

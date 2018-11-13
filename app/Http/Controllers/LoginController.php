@@ -40,7 +40,7 @@ class LoginController extends Controller
 			Cookie::queue(Cookie::forever('_lvc', $id));
 			session(['user_session' => $id]);
 
-			return API::response(API::SUCCESS, 1);
+			return API::response(API::SUCCESS, readConfig()->login_redir);
 		} else {
 
 			return API::response(API::FAIL, 1);

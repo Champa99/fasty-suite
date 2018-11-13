@@ -25,6 +25,9 @@ h4.title {
   font-weight: bold;
   font-size: 25px; }
 
+.row {
+  margin-bottom: 10px; }
+
 .button {
   padding: 10px 16px;
   background: rgba(255, 115, 0, 0.932);
@@ -61,6 +64,11 @@ h4.title {
     -webkit-transition: 0.2s all;
     transition: 0.2s all; }
 
+.content-holder {
+  border-radius: 4px;
+  background: #fff;
+  padding: 8px; }
+
 .loginHolder {
   width: 100%;
   height: 100%;
@@ -73,40 +81,57 @@ h4.title {
     color: #fff;
     font-weight: 200;
     letter-spacing: .5px; }
-  .loginHolder .loginWindow {
-    height: 350px;
+  .loginHolder .login-modul-holder {
     width: 300px;
+    height: 295px;
     position: fixed;
     bottom: 0;
     top: 0;
     right: 0;
     left: 0;
-    margin: auto;
-    background: #fff;
-    border-radius: 4px; }
-    .loginHolder .loginWindow .title {
-      font-size: 40px; }
-    .loginHolder .loginWindow .cred-button {
-      width: 100%; }
-    .loginHolder .loginWindow .cred-input {
-      background: rgba(0, 0, 0, 0.1);
+    margin: auto; }
+    .loginHolder .login-modul-holder .wrong-credentials {
+      color: #fff;
+      width: 300px;
+      background: red;
       border-radius: 4px;
-      padding: 12px 6px;
-      font-size: 17px;
-      color: #333;
-      border: 1px solid rgba(255, 115, 0, 0.932) !important;
-      width: 100%;
-      max-width: -webkit-calc(100% - 12px);
-      max-width: -moz-calc(100% - 12px);
-      max-width: calc(100% - 12px); }
-      .loginHolder .loginWindow .cred-input::placeholder {
-        /* Chrome, Firefox, Opera, Safari 10.1+ */
-        color: #8a8a8a; }
-      .loginHolder .loginWindow .cred-input:-ms-input-placeholder {
-        /* Internet Explorer 10-11 */
-        color: #8a8a8a; }
-      .loginHolder .loginWindow .cred-input::-ms-input-placeholder {
-        /* Microsoft Edge */
-        color: #8a8a8a; }
+      padding: 8px;
+      margin: auto;
+      margin-bottom: -40px;
+      -moz-transition: 0.2s margin;
+      -o-transition: 0.2s margin;
+      -webkit-transition: 0.2s margin;
+      transition: 0.2s margin; }
+      .loginHolder .login-modul-holder .wrong-credentials.open {
+        margin-bottom: -5px; }
+    .loginHolder .login-modul-holder .loginWindow {
+      height: 295px;
+      width: 300px;
+      background: #fff;
+      border-radius: 4px; }
+      .loginHolder .login-modul-holder .loginWindow .title {
+        font-size: 40px; }
+      .loginHolder .login-modul-holder .loginWindow .cred-button {
+        width: 100%; }
+      .loginHolder .login-modul-holder .loginWindow .cred-input {
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        padding: 12px 6px;
+        font-size: 17px;
+        color: #333;
+        border: 1px solid rgba(255, 115, 0, 0.932) !important;
+        width: 100%;
+        max-width: -webkit-calc(100% - 12px);
+        max-width: -moz-calc(100% - 12px);
+        max-width: calc(100% - 12px); }
+        .loginHolder .login-modul-holder .loginWindow .cred-input::placeholder {
+          /* Chrome, Firefox, Opera, Safari 10.1+ */
+          color: #8a8a8a; }
+        .loginHolder .login-modul-holder .loginWindow .cred-input:-ms-input-placeholder {
+          /* Internet Explorer 10-11 */
+          color: #8a8a8a; }
+        .loginHolder .login-modul-holder .loginWindow .cred-input::-ms-input-placeholder {
+          /* Microsoft Edge */
+          color: #8a8a8a; }
 
 /*# sourceMappingURL=login.css.map */

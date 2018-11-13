@@ -1,0 +1,63 @@
+/*
+ * Auto created by artisan on 06.11.2018 at 18:30
+ * components/adminHeader
+ * @author Champa
+ */
+
+.header {
+	height: 250px;
+
+	@include gradient(-315deg,  $primary-color,  $primary-dark);
+
+	h1 {
+		font-size: 45px;
+		text-align: center;
+		color: #fff;
+		font-weight: lighter;
+		margin: 0;
+		padding-top: 85px;
+
+		span {
+			font-weight: normal;
+		}
+	}
+
+	.menu-bar {
+		height: 50px;
+		margin-top: 35px;
+		background: rgba(255, 255, 255, .9);
+		border-radius: 4px 4px 0 0;
+
+		.menu-list {
+			
+			.menu-item {
+				float: left;
+				height: 50px;
+				line-height: 45px;
+				text-align: center;
+				padding: 0 8px;
+				font-size: 19px;
+				font-weight: 500;
+				color: rgb(66, 66, 66);
+
+				@include transition(.2s all);
+
+				.icon {
+					color: $primary-color;
+				}
+
+				&:hover {
+					background: #fff;
+				}
+
+				&:nth-of-type(1) {
+					border-radius: 4px 0 0 0;
+				}
+			}
+		}
+	}
+}
+
+.pull-up-content {
+	margin-top: -35px;
+}

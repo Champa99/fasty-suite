@@ -1,0 +1,30 @@
+/*
+ * Auto created by artisan on 12.11.2018 at 13:56
+ * components/_widgets
+ * @author Champa
+ */
+
+ .widget-container {
+	border-radius: 4px;
+
+	.title {
+		color: #fff;
+		border-radius: 4px 4px 0 0;
+		font-size: 19px;
+		padding: 8px;
+		font-weight: 500;
+		background: $primary-color;
+	}
+
+	.content {
+		border: 1px solid rgba(0, 0, 0, .1);
+		border-top: 0;
+		border-radius: 0 0 4px 4px;
+		padding: 8px;
+
+		article.news {
+
+			
+		}
+	}
+}
