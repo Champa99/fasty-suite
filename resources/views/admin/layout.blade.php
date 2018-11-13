@@ -26,6 +26,11 @@
 						<i class="icon fas fa-tachometer-alt"></i>
 						@lang('buttons.admin_dash')
 					</a>
+
+					<a href="/admin/module/installer" class="menu-item">
+						<i class="icon fas fa-hat-wizard"></i>
+						@lang('buttons.admin_module_installer')
+					</a>
 				</div>
 			</div>
 		</div>

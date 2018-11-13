@@ -8,6 +8,10 @@
  * imports/_vars
  * @author Champa
  */
+a {
+  color: rgba(255, 115, 0, 0.932);
+  font-weight: 400; }
+
 .normalize_input {
   border: 0 !important;
   box-shadow: none !important;
@@ -141,6 +145,38 @@ h4.title {
  * pages/adminIndex
  * @author Champa
  */
+.news-widget .content {
+  overflow-y: auto;
+  height: 300px; }
+  .news-widget .content h4 {
+    font-weight: bold;
+    margin-bottom: 0; }
+    .news-widget .content h4 .urgent {
+      color: red;
+      animation: urgent-flash 1s linear infinite; }
+  .news-widget .content .under-title-holder {
+    height: 25px; }
+    .news-widget .content .under-title-holder p.time-and-date {
+      float: left;
+      margin-top: 0;
+      font-size: 16px;
+      width: 130px; }
+    .news-widget .content .under-title-holder .dash {
+      float: left;
+      height: 1px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 12px;
+      margin-left: 5px;
+      width: 100%;
+      max-width: -webkit-calc(100% - 140px);
+      max-width: -moz-calc(100% - 140px);
+      max-width: calc(100% - 140px); }
+
+@keyframes urgent-flash {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 body {
   background: #eeeeee; }
 

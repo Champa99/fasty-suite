@@ -6,5 +6,6 @@
  */
 
 return [
-	'admin_dash' => 'Dashboard'
+	'admin_dash' => 'Dashboard',
+	'admin_module_installer' => 'Module installer'
 ];

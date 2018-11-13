@@ -43,7 +43,8 @@ class LoadNews
 
 			$article = [
 				'id' => $i,
-				'time' => 1542029729,
+				'timestamp' => 1542029729,
+				'urgent' => true,
 				'title' => 'Update the platform ASAP',
 				'content' => 'In ac purus sed lectus porta dapibus non ut diam. Praesent a sem ut enim maximus dignissim non eget felis.
 				Pellentesque felis odio, rutrum nec tristique eu, sodales ut magna. Proin eget ante dignissim, rhoncus nibh at, viverra erat.

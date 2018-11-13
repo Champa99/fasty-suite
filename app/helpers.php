@@ -46,9 +46,9 @@ if (!function_exists('readConfig')) {
 }
  #endregion
 
- /**
+/**
 	Request helpers
-  */
+ */
 
 #region
 if (!function_exists('getBrowser')) {
@@ -72,6 +72,20 @@ if (!function_exists('getOS')) {
 	function getOS() : string {
 
 		return App\Packages\System\Request::getOS();
+	}
+}
+#endregion
+
+/**
+	Time helpers
+ */
+
+#region
+if(!function_exists('formatStamp')) {
+
+	function formatStamp(int $timestamp) : string {
+
+		return \App\Packages\System\Time::StampToReadable($timestamp);
 	}
 }
 #endregion

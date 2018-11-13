@@ -8,6 +8,10 @@
  * imports/_vars
  * @author Champa
  */
+a {
+  color: rgba(255, 115, 0, 0.932);
+  font-weight: 400; }
+
 .normalize_input {
   border: 0 !important;
   box-shadow: none !important;

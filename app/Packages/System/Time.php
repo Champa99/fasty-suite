@@ -22,4 +22,9 @@ class Time
 
 		return $hours * 3600;
 	}
+
+	public static function StampToReadable(int $timestamp) : string {
+
+		return date("H:i - d.m.Y", $timestamp);
+	}
 }
