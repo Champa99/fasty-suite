@@ -71,7 +71,8 @@ h4.title {
 .content-holder {
   border-radius: 4px;
   background: #fff;
-  padding: 8px; }
+  padding: 8px;
+  margin-bottom: 20px; }
 
 /*
  * Auto created by artisan on 12.11.2018 at 13:56
@@ -177,6 +178,68 @@ h4.title {
     opacity: 0; }
   to {
     opacity: 1; } }
+/*
+ * Auto created by artisan on 06.01.2019 at 18:40
+ * pages/_adminInstaller
+ * @author Champa
+ */
+.module-loader-holder {
+  height: 400px; }
+  .module-loader-holder .module-loader {
+    margin: auto;
+    width: 70px;
+    height: 70px;
+    padding-top: 120px; }
+  .module-loader-holder .text {
+    text-align: center;
+    font-size: 17px;
+    margin-top: 75px; }
+
+.module-information {
+  margin-top: 15px; }
+  .module-information .module-picture {
+    width: 100%; }
+  .module-information .information-grid .row {
+    margin-bottom: 0; }
+  .module-information .information-grid .installer-butttons {
+    margin-top: 15px; }
+  .module-information .information-grid .module-changes {
+    margin-top: 10px; }
+    .module-information .information-grid .module-changes .window-toggler {
+      background: transparent;
+      padding: 4px 8px;
+      border-radius: 4px;
+      border: 2px solid rgba(0, 0, 0, 0.2);
+      cursor: pointer; }
+      .module-information .information-grid .module-changes .window-toggler .icon {
+        -moz-transition: 0.2s all;
+        -o-transition: 0.2s all;
+        -webkit-transition: 0.2s all;
+        transition: 0.2s all; }
+      .module-information .information-grid .module-changes .window-toggler:hover .icon {
+        transform: translateY(5px); }
+      .module-information .information-grid .module-changes .window-toggler.active {
+        border-bottom: 0;
+        border-radius: 4px 4px 0 0; }
+    .module-information .information-grid .module-changes .changes-window {
+      background: transparent;
+      padding: 8px;
+      border-radius: 0 0 4px 4px;
+      border: 2px solid rgba(0, 0, 0, 0.2);
+      border-top: 0; }
+      .module-information .information-grid .module-changes .changes-window .section h4 {
+        margin: 0; }
+      .module-information .information-grid .module-changes .changes-window .section p {
+        margin: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding-bottom: 8px; }
+      .module-information .information-grid .module-changes .changes-window .section .icon.panic {
+        color: #ff2323; }
+      .module-information .information-grid .module-changes .changes-window .section .icon.conflict {
+        color: #ffa700; }
+      .module-information .information-grid .module-changes .changes-window .section .icon.ok {
+        color: #00da00; }
+
 body {
   background: #eeeeee; }
 

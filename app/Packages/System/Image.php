@@ -5,7 +5,7 @@
  * @author Champa
  */
 
-namespace App\Packages\Extensions;
+namespace App\Packages\System;
 
 class Image
 {

@@ -7,6 +7,7 @@
 'use strict';
 
 let buttonProperties = {};
+let _token = '';
 
 (function( $, window, document, undefined ){
 
@@ -72,6 +73,8 @@ let buttonProperties = {};
 			return this;
 		},
 	});
+
+	_token = $("#the-t").attr('content');
 })( jQuery, window, document );
 
 var debugResponse = function(res) {

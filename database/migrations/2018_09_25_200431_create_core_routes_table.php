@@ -23,7 +23,7 @@ class CreateCoreRoutesTable extends Migration
 			// Provide the fields we're gonna use
 			$table->increments('id');
 			$table->string('method', 8);
-			$table->string('uri', 255);
+			$table->string('uri', 255)->unique();
 			$table->string('controller', 255);
 			$table->boolean('isEnabled')->default(true);
 			$table->smallInteger('perm_group');

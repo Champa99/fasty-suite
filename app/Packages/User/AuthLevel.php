@@ -9,5 +9,6 @@ namespace App\Packages\User;
 
 class AuthLevel
 {
-	
+	// 1 - ADMIN GROUP
+		// 2 - Module installer
 }

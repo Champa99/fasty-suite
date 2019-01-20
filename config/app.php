@@ -150,6 +150,7 @@ return [
         /*
          * Package Service Providers...
          */
+		ZanySoft\Zip\ZipServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -163,6 +164,7 @@ return [
 		App\Providers\SecureRouteServiceProvider::class,
 		App\Providers\RouteGuardServiceProvider::class,
 		App\Providers\UserServiceProvider::class,
+		App\Providers\APIResponseServiceProvider::class
     ],
 
     /*
@@ -212,12 +214,13 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
 		'View' => Illuminate\Support\Facades\View::class,
 
+		'Zip' => ZanySoft\Zip\ZipFacade::class,
 
 		'ConfigManager' => App\Packages\Core\ConfigManager::class,
 		'SecureRoute' => App\Facades\SecureRoute::class,
 		'User' => App\Facades\User::class,
 		'RouteGuard' => App\Facades\RouteGuard::class,
-		'ButtonManager' => App\Packages\Core\ButtonManager::class
-    ],
-
+		'ButtonManager' => App\Packages\Core\ButtonManager::class,
+		'ResponseBuilder' => App\Facades\ResponseBuilder::class
+    ]
 ];

@@ -71,7 +71,8 @@ h4.title {
 .content-holder {
   border-radius: 4px;
   background: #fff;
-  padding: 8px; }
+  padding: 8px;
+  margin-bottom: 20px; }
 
 .loginHolder {
   width: 100%;

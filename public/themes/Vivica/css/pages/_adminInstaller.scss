@@ -1,0 +1,106 @@
+/*
+ * Auto created by artisan on 06.01.2019 at 18:40
+ * pages/_adminInstaller
+ * @author Champa
+ */
+
+.module-loader-holder {
+	height: 400px;
+
+	.module-loader {
+		margin: auto;
+		width: 70px;
+		height: 70px;
+		padding-top: 120px;
+	}
+
+	.text {
+		text-align: center;
+		font-size: 17px;
+		margin-top: 75px;
+	}
+}
+
+.module-information {
+	margin-top: 15px;
+	
+	.module-picture {
+		width: 100%;
+	}
+
+	.information-grid {
+		.row {
+			margin-bottom: 0;
+		}
+
+		.installer-butttons {
+			margin-top: 15px;
+		}
+
+		.module-changes {
+			margin-top: 10px;
+
+			.window-toggler {
+				background: transparent;
+				padding: 4px 8px;
+				border-radius: 4px;
+				border: 2px solid rgba(0, 0, 0, .2);
+				cursor: pointer;
+
+				.icon {
+					@include transition(.2s all);
+				}
+
+				&:hover {
+					.icon {
+						transform: translateY(5px);
+					}
+				}
+
+				&.active {
+					border-bottom: 0;
+					border-radius: 4px 4px 0 0;
+				}
+			}
+
+			.changes-window {
+				background: transparent;
+				padding: 8px;
+				border-radius: 0 0 4px 4px;
+				border: 2px solid rgba(0, 0 ,0 , .2);
+				border-top: 0;
+				
+				.section {
+					h4 {
+						margin: 0;
+					}
+
+					ol {
+						li {
+						}
+					}
+
+					p {
+						margin: 0;
+						border-bottom: 1px solid rgba(0, 0, 0, .1);
+						padding-bottom: 8px;
+					}
+
+					.icon {
+						&.panic {
+							color: #ff2323;
+						}
+
+						&.conflict {
+							color: #ffa700;
+						}
+
+						&.ok {
+							color: #00da00;
+						}
+					}
+				}
+			}
+		}
+	}
+}
