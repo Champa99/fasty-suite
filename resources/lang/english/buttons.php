@@ -7,5 +7,6 @@
 
 return [
 	'admin_dash' => 'Dashboard',
-	'admin_module_installer' => 'Module installer'
+	'admin_module_installer' => 'Module installer',
+	'admin_modules' => 'Modules'
 ];

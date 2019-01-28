@@ -46,7 +46,7 @@
 					color: $primary-color;
 				}
 
-				&:hover {
+				&:hover, &.active {
 					background: #fff;
 				}
 
@@ -55,6 +55,30 @@
 				}
 			}
 		}
+	}
+}
+
+.sub-menu {
+	position: relative;
+	height: 40px;
+	margin-top: -4px;
+	margin-bottom: 4px;
+
+	.submenu-item {
+		display: inline-block;
+		height: 40px;
+		line-height: 35px;
+		text-align: center;
+		padding: 0 8px;
+		font-size: 17px;
+		font-weight: 400;
+		color: rgb(66, 66, 66);
+		text-transform: lowercase;
+		font-variant: small-caps;
+	}
+
+	.icon {
+		margin-right: 4px;
 	}
 }
 

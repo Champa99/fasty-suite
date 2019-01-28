@@ -27,9 +27,9 @@
 						@lang('buttons.admin_dash')
 					</a>
 
-					<a href="/admin/module/installer" class="menu-item">
-						<i class="icon fas fa-hat-wizard"></i>
-						@lang('buttons.admin_module_installer')
+					<a href="/admin/module" class="menu-item submenu-hover" data-id="1">
+						<i class="icon fas fa-puzzle-piece"></i>
+						@lang('buttons.admin_modules')
 					</a>
 				</div>
 			</div>
@@ -38,11 +38,23 @@
 
 	<div class="container">
 		<div class="content-holder pull-up-content z-depth-3">
+			<div class="sub-menu" id="sub_menu"></div>
+
 			@yield ('content')
 		</div>
 	</div>
 
 	@include ('layouts.scripts')
+	{!! jsComponent('js/admin/utils') !!}
 	@yield ('scripts')
+
+	<script>
+		jQuery(function($) {
+			initSubmenu([
+				{parent: 1, icon: "fas fa-puzzle-piece", text: "@lang("buttons.admin_modules")", link: "/admin/module"},
+				{parent: 1, icon: "fas fa-hat-wizard", text: "@lang("buttons.admin_module_installer")", link: "/admin/module/installer"},
+			]);
+		});
+	</script>
 </body>
 </html>

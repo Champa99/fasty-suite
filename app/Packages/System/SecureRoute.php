@@ -22,6 +22,11 @@ class SecureRoute
 	protected $routes = [];
 
 	/**
+	 * Group prefix
+	 */
+	protected $prefix = '';
+
+	/**
 	 * Holds the laravel router component
 	 */
 
@@ -32,12 +37,24 @@ class SecureRoute
 		$this->router = app('router');
 	}
 
+	public function group(string $prefix, $cb) {
+
+		$this->prefix = $prefix;
+
+		$cb();
+
+		$this->prefix = '';
+	}
+
 	/**
 	 * Adds a get route to the collection
 	 */
 
 	public function get($uri, $action = null, int $perm_group = 0, int $perm = 0) {
 		
+		if(!empty($this->prefix))
+			$uri = $this->prefix . $uri;
+
 		$this->addSecureRoute($uri, $perm_group, $perm);
 
 		return $this->router->get($uri, $action);
@@ -49,6 +66,9 @@ class SecureRoute
 
 	public function post($uri, $action = null, int $perm_group = 0, int $perm = 0) {
 		
+		if(!empty($this->prefix))
+			$uri = $this->prefix . $uri;
+
 		$this->addSecureRoute($uri, $perm_group, $perm);
 
 		return $this->router->post($uri, $action);

@@ -12,6 +12,11 @@ use Illuminate\Filesystem\Filesystem;
 class AdminModuleController extends Controller
 {
 
+	public function index(Request $request) {
+
+		return view('admin.modules');
+	}
+
 	public function installer(Request $request, ?int $step = null) {
 		
 		if($request->isMethod('get')) {
@@ -60,7 +65,9 @@ class AdminModuleController extends Controller
 				$code = $installer->install();
 
 				return view('admin.moduleInstallStatus', [
-					
+					'moduleName' => $moduleName,
+					'code' => $code,
+					'status' => $installer->getInstallStatus()
 				]);
 			}
 		}

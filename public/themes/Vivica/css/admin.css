@@ -133,10 +133,29 @@ h4.title {
       transition: 0.2s all; }
       .header .menu-bar .menu-list .menu-item .icon {
         color: rgba(255, 115, 0, 0.932); }
-      .header .menu-bar .menu-list .menu-item:hover {
+      .header .menu-bar .menu-list .menu-item:hover, .header .menu-bar .menu-list .menu-item.active {
         background: #fff; }
       .header .menu-bar .menu-list .menu-item:nth-of-type(1) {
         border-radius: 4px 0 0 0; }
+
+.sub-menu {
+  position: relative;
+  height: 40px;
+  margin-top: -4px;
+  margin-bottom: 4px; }
+  .sub-menu .submenu-item {
+    display: inline-block;
+    height: 40px;
+    line-height: 35px;
+    text-align: center;
+    padding: 0 8px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #424242;
+    text-transform: lowercase;
+    font-variant: small-caps; }
+  .sub-menu .icon {
+    margin-right: 4px; }
 
 .pull-up-content {
   margin-top: -35px; }
@@ -239,6 +258,24 @@ h4.title {
         color: #ffa700; }
       .module-information .information-grid .module-changes .changes-window .section .icon.ok {
         color: #00da00; }
+
+.module-install-status .status-list {
+  background: #263238;
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  max-height: 315px;
+  overflow-y: auto; }
+  .module-install-status .status-list ol {
+    padding: 8px;
+    margin: 0;
+    list-style: none; }
+    .module-install-status .status-list ol li {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 5px; }
+      .module-install-status .status-list ol li .addition {
+        color: #00d60b; }
+      .module-install-status .status-list ol li:nth-last-of-type(1) {
+        border-bottom: 0; }
 
 body {
   background: #eeeeee; }

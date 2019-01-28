@@ -347,7 +347,7 @@ class Installer
 	 */
 	protected function addToDatabase() : void {
 
-		$q = "INSERT INTO core_modules (name, version, cycle, type, author, website, installed_on, updated_on)
+		$q = "INSERT IGNORE INTO core_modules (name, version, cycle, type, author, website, installed_on, updated_on)
 		VALUES (:name, :version, :cycle, :type, :author, :website, :currDate, :currDate2)";
 
 		$time = time();
@@ -373,11 +373,11 @@ class Installer
 
 		if(!empty($routes)) {
 
-			DB::transaction(function () {
+			DB::transaction(function () use ($routes) {
 
 				foreach($routes AS $path => $property) {
 
-					$q = "INSERT INTO core_routes (method, uri, controller, perm_group, perm) VALUES
+					$q = "INSERT  IGNORE INTO core_routes (method, uri, controller, perm_group, perm) VALUES
 					(:method, :uri, :controller, :perm_group, :perm)";
 
 					DB::insert($q, [
@@ -390,5 +390,15 @@ class Installer
 				}
 			}, 3);
 		}
+	}
+
+	/**
+	 * Get the value of installStatus
+	 *
+	 * @return  array
+	 */
+	public function getInstallStatus() : ?array {
+
+		return $this->installStatus;
 	}
 }

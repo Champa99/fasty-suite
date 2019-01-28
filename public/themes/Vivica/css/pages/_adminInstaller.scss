@@ -104,3 +104,33 @@
 		}
 	}
 }
+
+.module-install-status {
+
+	.status-list {
+		background: #263238;
+		color: rgba(255, 255, 255, .9);
+		border-radius: 4px;
+		max-height: 315px;
+		overflow-y: auto;
+
+		ol {
+			padding: 8px;
+			margin: 0;
+			list-style: none;
+
+			li {
+				border-bottom: 1px solid rgba(255, 255, 255, .1);
+				padding: 5px;
+
+				.addition {
+					color: rgb(0, 214, 11);
+				}
+
+				&:nth-last-of-type(1) {
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+}

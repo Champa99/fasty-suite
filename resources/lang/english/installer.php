@@ -22,5 +22,8 @@ return [
 	By default, FastySuite will not allow this. For more info, click <a href="#">here</a>',
 	'desc_conflict' => 'Conflict means that there are some files in the module with the same name as the ones currently on the platform.
 	Fasty will try to merge these files',
-	'desc_add' => 'These are the files that will be added to the platform'
+	'desc_add' => 'These are the files that will be added to the platform',
+	'install_success' => 'successfully installed!',
+	'changes_made' => 'The module made the following changes to your platform',
+	'total' => 'Total'
 ];

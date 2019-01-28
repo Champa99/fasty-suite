@@ -24,13 +24,17 @@ foreach($routes AS $route) {
 }
 
 // Admin panel
-SecureRoute::get('/admin', 'AdminController@index', 1, 1);
 
+SecureRoute::group('admin', function() {
 
-SecureRoute::get('/admin/module/installer', 'AdminModuleController@installer', 1, 2);
-SecureRoute::post('/admin/module/installer', 'AdminModuleController@installer', 1, 2);
-SecureRoute::post('/admin/module/installer/{step}', 'AdminModuleController@installer', 1, 2)->where('step', '[0-9]+');
-SecureRoute::post('/admin/module/installer/remove', 'AdminModuleController@installerRemove', 1, 2);
+	SecureRoute::get('/', 'AdminController@index', 1, 1);
+	SecureRoute::get('/module', 'AdminModuleController@index', 1, 2);
+	SecureRoute::get('/module/installer', 'AdminModuleController@installer', 1, 2);
+	
+	SecureRoute::post('/module/installer', 'AdminModuleController@installer', 1, 2);
+	SecureRoute::post('/module/installer/{step}', 'AdminModuleController@installer', 1, 2)->where('step', '[0-9]+');
+	SecureRoute::post('/module/installer/remove', 'AdminModuleController@installerRemove', 1, 2);
+});
 
 // Login routes
 SecureRoute::get('/login', 'LoginController@index');

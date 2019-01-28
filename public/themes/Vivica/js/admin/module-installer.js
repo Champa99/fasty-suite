@@ -15,12 +15,25 @@ jQuery(function($) {
 	const $module_information = $("#module_information");
 	const $module_input_fname = $("#module_input_fname");
 	const $module_loader = $("#module_loader");
+	const $module_loader_status = $("#module_loader_status");
+	const $module_install_status = $("#module_install_status");
 
 	// Functions
 
-	window.status='Test';
+	function showInstallLoader(text) {
+
+		$module_installer.fadeOut("fast");
+		$module_information.fadeOut("fast");
+
+		setTimeout(function() {
+			$module_loader_status.text(text);
+			$module_loader.fadeIn("fast");
+		}, 200);
+	}
 
 	function startInstall(moduleName) {
+
+		showInstallLoader("Installing the module...");
 
 		$.ajax({
 			type: 'POST',
@@ -30,8 +43,12 @@ jQuery(function($) {
 				m_name: moduleName
 			},
 			success: function(res) {
-				alert(res);
-				$("body").append(res);
+				
+				$module_install_status.html(res);
+				$module_loader.fadeOut("fast", function() {
+
+					$module_install_status.fadeIn("fast");
+				});
 			}
 		});
 	}
@@ -42,10 +59,7 @@ jQuery(function($) {
 
 		if(!uploadingModule && $module_input.val() != '') {
 
-			$module_installer.fadeOut("fast", function() {
-
-				$module_loader.fadeIn("fast");
-			});
+			showInstallLoader("Uploading the module...");
 
 			uploadingModule = true;
 

@@ -62,7 +62,8 @@
 			</div>
 		</div>
 
-		<div class="text">Uploading the module...</div>
+		<div class="text" id="module_loader_status">Uploading the module...</div>
 	</div>
-	<div id="module_information"></div>
+	<div id="module_information" style="display: none;"></div>
+	<div id="module_install_status" style="display: none;"></div>
 @endsection
