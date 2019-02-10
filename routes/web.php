@@ -3,6 +3,7 @@
 use App\Packages\Core\RouteManager;
 
 // Route manager
+/*
 $RouteManager = new RouteManager();
 $RouteManager->loadRoutes();
 
@@ -21,7 +22,7 @@ foreach($routes AS $route) {
 		SecureRoute::post($route->uri, $route->controller, $route->perm_group, $route->perm);
 		continue;
 	}
-}
+}*/
 
 // Admin panel
 
@@ -44,7 +45,7 @@ SecureRoute::get('/', 'HomeController@index');
 
 Route::get('/test', function() {
 
-	$path = storage_path('platform/installer/FastyPackage');
+	/*$path = storage_path('platform/installer/FastyPackage');
 	$info = file_get_contents($path . '/installer.json');
 	$info = json_decode($info);
 
@@ -55,5 +56,7 @@ Route::get('/test', function() {
 		echo $test;
 		echo '<br/>';
 		dump($other);
-	}
+	}*/
+
+	echo \Hash::make('hahaha');
 });

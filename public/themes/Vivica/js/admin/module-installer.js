@@ -25,10 +25,8 @@ jQuery(function($) {
 		$module_installer.fadeOut("fast");
 		$module_information.fadeOut("fast");
 
-		setTimeout(function() {
-			$module_loader_status.text(text);
-			$module_loader.fadeIn("fast");
-		}, 200);
+		$module_loader_status.text(text);
+		$module_loader.fadeIn("fast");
 	}
 
 	function startInstall(moduleName) {

@@ -25,5 +25,6 @@ return [
 	'desc_add' => 'These are the files that will be added to the platform',
 	'install_success' => 'successfully installed!',
 	'changes_made' => 'The module made the following changes to your platform',
-	'total' => 'Total'
+	'total' => 'Total',
+	'go_to_modules' => 'Go to modules page'
 ];

@@ -12,6 +12,8 @@
 			</ol>
 		</div>
 
+		<div class="row"></div>
+
 		<a href="/admin/module" class="btn waves-effect waves-dark">@lang('installer.go_to_modules')</a>
 	@else
 	

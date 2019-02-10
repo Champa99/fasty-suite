@@ -277,6 +277,28 @@ h4.title {
       .module-install-status .status-list ol li:nth-last-of-type(1) {
         border-bottom: 0; }
 
+/*
+ * Auto created by artisan on 10.02.2019 at 14:00
+ * pages/_adminModules
+ * @author Champa
+ */
+.module-list .module-holder {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 8px; }
+  .module-list .module-holder .module-picture {
+    width: 100%; }
+  .module-list .module-holder .module-info h4 {
+    margin: 0;
+    margin-bottom: 7px; }
+  .module-list .module-holder .module-info p {
+    margin: 0; }
+  .module-list .module-holder .options .icon {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 26px;
+    cursor: pointer; }
+    .module-list .module-holder .options .icon:hover {
+      color: rgba(0, 0, 0, 0.6); }
+
 body {
   background: #eeeeee; }
 

@@ -8,13 +8,18 @@ use Storage;
 use App\Packages\System\Uploader;
 use App\Packages\Installer\{Installer, InstallDiff};
 use Illuminate\Filesystem\Filesystem;
+use App\Packages\Modules\Modules;
 
 class AdminModuleController extends Controller
 {
 
 	public function index(Request $request) {
 
-		return view('admin.modules');
+		$modules = new Modules();
+
+		return view('admin.modules', [
+			'modules' => $modules->getAll()
+		]);
 	}
 
 	public function installer(Request $request, ?int $step = null) {

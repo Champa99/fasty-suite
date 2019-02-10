@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTestMod1Table extends Migration
+class CreateTestMod2Table extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTestMod1Table extends Migration
      */
     public function up()
     {
-        Schema::create('test_mod1', function (Blueprint $table) {
+        Schema::create('test_mod2', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreateTestMod1Table extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('test_mod1');
+        Schema::dropIfExists('test_mod2');
     }
 }

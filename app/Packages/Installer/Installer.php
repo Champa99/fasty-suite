@@ -293,8 +293,6 @@ class Installer
 		// Tells wheter or not the module migrations mangle with core_ tables
 		$noPanic = true;
 
-		$platMigPath = database_path('migrations');
-
 		foreach($this->moduleInfo->files->migrations AS $migrationFile) {
 
 			$modMigPath = storage_path('platform/installer/'. $this->moduleName . '/migrations//'. $migrationFile);
@@ -316,7 +314,7 @@ class Installer
 			// Creates an instance of the filesystem
 			$fileSystem = new Filesystem();
 
-			$pathToModMigs = $platMigPath .'/'. $this->moduleName;
+			$pathToModMigs = database_path('migrations') .'/'. $this->moduleName;
 
 			// Check if a folder/file with the module name already exists, if not, create it
 			if(!$fileSystem->exists($pathToModMigs) || !$fileSystem->isDirectory($pathToModMigs)) {
@@ -328,6 +326,8 @@ class Installer
 			// Move the migration files to the platform folder...
 			foreach($this->moduleInfo->files->migrations AS $migrationFile) {
 				
+				$modMigPath = storage_path('platform/installer/'. $this->moduleName . '/migrations//'. $migrationFile);
+
 				$fileSystem->copy($modMigPath, $pathToModMigs .'/'. $migrationFile);
 				array_push($this->installStatus['updates'], $pathToModMigs .'/'. $migrationFile);
 			}

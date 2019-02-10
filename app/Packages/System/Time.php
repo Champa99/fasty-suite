@@ -25,6 +25,6 @@ class Time
 
 	public static function StampToReadable(int $timestamp) : string {
 
-		return date("H:i - d.m.Y", $timestamp);
+		return date("d.m.Y", $timestamp) .' at '. date("H:i", $timestamp);
 	}
 }

@@ -1,0 +1,40 @@
+/*
+ * Auto created by artisan on 10.02.2019 at 14:00
+ * pages/_adminModules
+ * @author Champa
+ */
+
+.module-list {
+
+	.module-holder {
+		border-bottom: 1px solid rgba(0, 0, 0, .1);
+		padding: 8px;
+
+		.module-picture {
+			width: 100%;
+		}
+
+		.module-info {
+			h4 {
+				margin: 0;
+				margin-bottom: 7px;
+			}
+
+			p {
+				margin: 0;
+			}
+		}
+
+		.options {
+			.icon {
+				color: rgba(0, 0, 0, .4);
+				font-size: 26px;
+				cursor: pointer;
+
+				&:hover {
+					color: rgba(0, 0, 0, .6);
+				}
+			}
+		}
+	}
+}

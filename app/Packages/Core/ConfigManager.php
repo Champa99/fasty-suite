@@ -36,7 +36,8 @@ class ConfigManager
 		self::$defaults = (object) [
 			'theme' => 'Vivica',
 			'community_name' => config('app.name'),
-			'cache_mode' => 'normal'
+			'cache_mode' => 'normal',
+			'login_redir' => '/'
 		];
 	}
 
